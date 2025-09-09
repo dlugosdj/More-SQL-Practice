@@ -1,0 +1,13 @@
+select sum(cast(rushing_yards as int)) as 'Total Rushing Yards'
+from Bills
+where posteam = 'BUF' and season_type = 'REG';
+
+
+select week, sum(cast(rushing_yards as int)) as 'Rushing Yards'
+from Bills
+where posteam = 'BUF' and season_type = 'REG'
+group by week
+order by 'Rushing Yards' desc;
+
+
+select 
